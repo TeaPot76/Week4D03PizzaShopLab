@@ -1,0 +1,24 @@
+
+
+<p> Edit order form: </p>
+<form method="post" action="/pizza_orders/<%=@order.id%>/update">
+  <label for="first_name"> First name:</label>
+  <input value = "<%=@order.first_name%>" type="text" id="first_name" name ="first_name" />
+  <label for="last_name"> Last name:</label>
+ <input value= "<%=@order.last_name%>" type = "text" id="last_name" name ="last_name"/>
+ <label for="topping"> Topping type:</label>
+
+  <select id = "topping name" name ="topping">
+    <option value ="pepperoni"<%= "selected" if @order.topping == "pepperoni"  %> >Pepperoni </option>
+    <option value ="hawaian"<%= "selected" if @order.topping == "hawaian"  %>> Hawaian </option>
+    <option value ="veggie" <%= "selected" if @order.topping == "veggie"  %> >Veggie</option>
+
+    </select>
+
+  <label for="quantity"> Quantity:</label>
+  <input value = "<%=@order.quantity%>" type = "number" id="quantity" name ="quantity" />
+
+
+  <input type = "submit" value="Order Pizza!" />
+
+</form>
